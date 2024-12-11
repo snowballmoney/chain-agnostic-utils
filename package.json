@@ -1,6 +1,8 @@
 {
-  "name": "chain-agnostic-utils",
+  "name": "@snowballmoney/chain-agnostic-utils",
   "version": "0.1.0",
+  "access": "public",
+  "author": "alexkiss767@gmail.com",
   "description": "Chain agnostic utilities for cross-chain applications",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,7 +18,6 @@
     "chain-agnostic",
     "multichain"
   ],
-  "author": "",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.0",

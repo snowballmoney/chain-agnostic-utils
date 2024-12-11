@@ -11,3 +11,8 @@ yarn-error.log*
 .yarn
 
 .vscode/*
+
+.DS_Store
+.env
+*.log
+coverage/
