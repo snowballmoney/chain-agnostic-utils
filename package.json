@@ -1,6 +1,6 @@
 {
   "name": "@snowballmoney/chain-agnostic-utils",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "access": "public",
   "author": "alexkiss767@gmail.com",
   "description": "Chain agnostic utilities for cross-chain applications",

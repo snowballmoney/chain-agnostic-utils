@@ -16,3 +16,4 @@ yarn-error.log*
 .env
 *.log
 coverage/
+.idea
