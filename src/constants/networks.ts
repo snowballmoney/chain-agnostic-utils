@@ -14,6 +14,7 @@ export const NETWORKS = {
     POLYGON: {
         MAINNET: `${NAMESPACES.EVM}:137`,
         MUMBAI: `${NAMESPACES.EVM}:80001`,
+        AMOY: `${NAMESPACES.EVM}:80002`,
     },
     ARBITRUM: {
         MAINNET: `${NAMESPACES.EVM}:42161`,
@@ -57,6 +58,8 @@ export const NETWORKS = {
     MOVEMENT: {
         MAINNET: `${NAMESPACES.MOVEMENT}:126`,
         TESTNET: `${NAMESPACES.MOVEMENT}:125`,
+        PORTO: `${NAMESPACES.MOVEMENT}:177`,
+        BARDOCK: `${NAMESPACES.MOVEMENT}:250`,
     },
     APTOS: {
         MAINNET: `${NAMESPACES.APTOS}:1`,
