@@ -113,10 +113,12 @@ export const NETWORKS = {
     APTOS: {
         MAINNET: `${NAMESPACES.APTOS}:1`,
         TESTNET: `${NAMESPACES.APTOS}:2`,
+        DEVNET: `${NAMESPACES.APTOS}:165`,
     },
     SUI: {
-        MAINNET: `${NAMESPACES.SUI}:1`,
-        TESTNET: `${NAMESPACES.SUI}:2`,
+        MAINNET: `${NAMESPACES.SUI}:mainnet`,
+        TESTNET: `${NAMESPACES.SUI}:testnet`,
+        DEVNET: `${NAMESPACES.SUI}:devnet`,
     },
 
     // Other major chains
