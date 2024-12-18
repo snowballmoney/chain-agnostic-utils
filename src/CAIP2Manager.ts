@@ -119,8 +119,8 @@ export class CAIP2Manager {
             throw new Error(`Invalid CAIP-2 identifier: ${caip2Id}`);
         }
         let metadataToSet = metadata
-        if (merge === true && this.networks.has(caip2Id)) {
-            metadataToSet = { ...this.network.get(caip2Id), ...metadata }
+        if (merge && this.networks.has(caip2Id)) {
+            metadataToSet = { ...this.networks.get(caip2Id), ...metadata }
         }
         this.networks.set(caip2Id, metadataToSet);
     }
