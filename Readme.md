@@ -51,6 +51,45 @@ console.log(ethData);
 // }
 ```
 
+### Using CAIP2Manager
+
+The CAIP2Manager provides a flexible way to manage network metadata, combining built-in networks with your custom ones.
+
+```typescript
+import { CAIP2Manager } from 'chain-agnostic-utils';
+
+// Get the singleton instance
+const manager = CAIP2Manager.getInstance();
+
+// Initialize with both default and custom networks
+manager.init({
+    defaultNetworks: true, // include all built-in networks
+    networks: {
+        'eip155:11155111': {
+            name: 'Sepolia',
+            currency: 'ETH',
+            icon: 'path/to/icon',
+            explorerUrl: 'https://sepolia.etherscan.io',
+            rpcUrl: 'https://rpc.sepolia.org'
+        }
+    }
+});
+
+// Access network metadata
+const ethData = manager.getNetwork('eip155:1');
+const isSupported = manager.hasNetwork('eip155:1');
+
+// Add new networks dynamically
+manager.addNetwork('eip155:123456', {
+    name: 'My Custom Network',
+    currency: 'TOKEN',
+    icon: 'path/to/icon'
+});
+
+// Get all registered networks
+const allNetworks = manager.getAllNetworks();
+```
+
 ### Parse CAIP-2 Identifiers
 
 ```typescript
@@ -64,23 +103,44 @@ console.log(reference);  // '1'
 ## Supported Networks
 
 - EVM-based (eip155)
-    - Ethereum
-    - BNB Smart Chain
-    - Polygon
-    - Arbitrum
-    - Optimism
-    - Avalanche
+  - Ethereum
+  - BNB Smart Chain
+  - Polygon
+  - Arbitrum
+  - Optimism
+  - Avalanche
+  - Base
+  - Linea
+  - and more...
 
 - Move-based
-    - Movement
-    - Aptos
-    - Sui
+  - Movement
+  - Aptos
+  - Sui
 
-- Others
-    - Solana
-    - Cosmos ecosystem
-    - Bitcoin (BIP-122)
-    - StarkNet
+- Layer 1 Ecosystems
+  - Bitcoin (BIP-122)
+  - Solana
+  - Cardano
+  - Polkadot
+  - Cosmos
+  - NEAR
+  - and more...
+
+- Layer 2 Solutions
+  - StarkNet
+  - zkSync
+  - Linea
+  - and more...
+
+## Network Metadata
+
+Each network includes metadata with:
+- Name
+- Native currency
+- Icon URL
+- Explorer URL
+- RPC URL (for applicable networks)
 
 ## Contributing
 
@@ -96,6 +156,8 @@ Contributions are welcome! Feel free to:
 - Add chain-specific validation rules
 - Add support for CAIP-10 (account identifiers)
 - Add support for more networks
+- Add network-specific RPC methods
+- Enhanced metadata management
 
 ## License
 
