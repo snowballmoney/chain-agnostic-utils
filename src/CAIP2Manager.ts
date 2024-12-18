@@ -113,12 +113,16 @@ export class CAIP2Manager {
     /**
      * Add or update network
      */
-    public addNetwork(caip2Id: string, metadata: NetworkMetadata): void {
+    public addNetwork(caip2Id: string, metadata: NetworkMetadata, merge = true): void {
         this.checkInitialized();
         if (!this.isValid(caip2Id)) {
             throw new Error(`Invalid CAIP-2 identifier: ${caip2Id}`);
         }
-        this.networks.set(caip2Id, metadata);
+        let metadataToSet = metadata
+        if (merge === true && this.networks.has(caip2Id)) {
+            metadataToSet = { ...this.network.get(caip2Id), ...metadata }
+        }
+        this.networks.set(caip2Id, metadataToSet);
     }
 
     /**
