@@ -1,4 +1,4 @@
-# chain-agnostic-utils
+# @snowballmoney/chain-agnostic-utils
 
 A lightweight TypeScript library implementing CAIP-2 (Chain Agnostic Improvement Proposal) standards for blockchain network identification. Makes cross-chain development simpler and more reliable.
 
@@ -14,9 +14,9 @@ This package provides a standardized way to identify any blockchain network usin
 ## Installation
 
 ```bash
-npm install chain-agnostic-utils
+npm install @snowballmoney/chain-agnostic-utils
 # or
-yarn add chain-agnostic-utils
+yarn add @snowballmoney/chain-agnostic-utils
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ yarn add chain-agnostic-utils
 ### Basic Network Identification
 
 ```typescript
-import { NETWORKS, isValidCAIP2 } from 'chain-agnostic-utils';
+import { NETWORKS, isValidCAIP2 } from '@snowballmoney/chain-agnostic-utils';
 
 // Get network identifiers
 const ethMainnet = NETWORKS.ETHEREUM.MAINNET;    // 'eip155:1'
@@ -39,7 +39,7 @@ console.log(isValidCAIP2('invalid'));   // false
 ### Network Metadata
 
 ```typescript
-import { NETWORK_METADATA, getNetworkMetadata } from 'chain-agnostic-utils';
+import { NETWORK_METADATA, getNetworkMetadata } from '@snowballmoney/chain-agnostic-utils';
 
 const ethData = NETWORK_METADATA[NETWORKS.ETHEREUM.MAINNET];
 console.log(ethData);
@@ -56,7 +56,7 @@ console.log(ethData);
 The CAIP2Manager provides a flexible way to manage network metadata, combining built-in networks with your custom ones.
 
 ```typescript
-import { CAIP2Manager } from 'chain-agnostic-utils';
+import { CAIP2Manager } from '@snowballmoney/chain-agnostic-utils';
 
 // Get the singleton instance
 const manager = CAIP2Manager.getInstance();
@@ -93,7 +93,7 @@ const allNetworks = manager.getAllNetworks();
 ### Parse CAIP-2 Identifiers
 
 ```typescript
-import { parseCAIP2 } from 'chain-agnostic-utils';
+import { parseCAIP2 } from '@snowballmoney/chain-agnostic-utils';
 
 const { namespace, reference } = parseCAIP2('eip155:1');
 console.log(namespace);  // 'eip155'
