@@ -41,7 +41,7 @@ export const NETWORK_METADATA: Record<string, NetworkMetadata> = {
   [NETWORKS.OPTIMISM.MAINNET]: {
     name: "Optimism",
     currency: "ETH",
-    icon: "https://optimism.io/favicon.ico",
+    icon: "https://coin-images.coingecko.com/asset_platforms/images/41/small/optimism.png?1706606778",
     explorerUrl: "https://optimistic.etherscan.io",
     rpcUrl: "https://mainnet.optimism.io",
   },
@@ -55,7 +55,7 @@ export const NETWORK_METADATA: Record<string, NetworkMetadata> = {
   [NETWORKS.BASE.MAINNET]: {
     name: "Base",
     currency: "ETH",
-    icon: "https://base.org/favicon.ico",
+    icon: "https://assets.coingecko.com/asset_platforms/images/131/small/base-network.png?1720533039",
     explorerUrl: "https://basescan.org",
     rpcUrl: "https://mainnet.base.org",
   },
@@ -230,7 +230,7 @@ export const NETWORK_METADATA: Record<string, NetworkMetadata> = {
   [NETWORKS.ZILLIQA.MAINNET]: {
     name: "Zilliqa",
     currency: "ZIL",
-    icon: "https://www.zilliqa.com/favicon.ico",
+    icon: "https://assets.coingecko.com/coins/images/2687/standard/Zilliqa-logo.png?1696503475",
     explorerUrl: "https://viewblock.io/zilliqa",
   },
   [NETWORKS.VECHAIN.MAINNET]: {
